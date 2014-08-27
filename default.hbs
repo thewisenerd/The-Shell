@@ -26,6 +26,12 @@
     <link rel="stylesheet" type="text/css" href="{{asset "highlighter/prettify.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
 
+    <!-- jQuery -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+    <!-- random quote generator! -->
+    <script type="text/javascript" src="/assets/js/un_quote.js"></script>
+
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
     
@@ -41,6 +47,13 @@
     </script>
 </head>
 <body class="{{body_class}}">
+
+	<script>
+	$(function () {
+		newquote();
+	});
+	</script>
+
 
     {{! Everything else gets inserted here }}
     {{{body}}}
@@ -60,5 +73,6 @@
     {{! Scripts }}
     <script type='text/javascript' src='/assets/highlighter/prettify.js'></script>
     <script type='text/javascript' src='/assets/js/shell.js'></script>
+    
 </body>
 </html>

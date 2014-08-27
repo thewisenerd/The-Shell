@@ -41,6 +41,9 @@
     font-style: normal;
 }
 
+/* @import url(http://fonts.googleapis.com/css?family=Anonymous+Pro:700);*/
+@import url(http://fonts.googleapis.com/css?family=Dosis:800);
+
 /* Apply these base styles to all icons */
 .icon-ghost, .icon-feed, .icon-twitter, .icon-google-plus, .icon-facebook {
     font-family: 'icons';
@@ -91,7 +94,7 @@ body {
     font-size: 2.0rem;
     line-height: 1.6em;
     color: #B2B6BD;
-    background: #2b303b
+    background: #000000
 }
 
 ::-moz-selection {
@@ -369,13 +372,17 @@ button, input, select, textarea {
 #site-head {
     position: relative;
     display: table;
+	padding-top: 2.5rem;
     width: 100%;
-    height: 60%;
-    margin-bottom: 5rem;
     text-align: center;
     color: #a0add5;
-    background: #1c212b no-repeat center center;
+    background: #000000 no-repeat center center;
     background-size: cover;
+    border-bottom: #1a1e27 2px dashed;
+}
+
+.blog-title {
+    font-family: "Dosis", "Lucida Console", Monaco, monospace;
 }
 
 /* Yo-logo. Yolo-go. Upload one in ghost/settings/ */
@@ -386,7 +393,6 @@ button, input, select, textarea {
     overflow: hidden;
     display: block;
     margin: 0 auto;
-    border: 5px solid #bf6165;
 
 }
 #blog-logo:before {  
@@ -408,12 +414,11 @@ button, input, select, textarea {
     -webkit-transition: background .3s linear;  
     -o-transition: background .3s linear;  
     transition: background .3s linear;  
-    border: 5px solid #bf6165;
 
 }
 
 #blog-logo:hover:before {
-    background: rgba(204,31,39, 0.5);  
+    background: rgba(102,102,102, 0.25);
     
 }
 #blog-logo img {
@@ -439,7 +444,9 @@ button, input, select, textarea {
 .blog-title {
     margin: 10px 0 10px 0;
     font-size: 5rem;
-    letter-spacing: -1px;
+    font-weight: 800;
+    letter-spacing: normal;
+    font-family: "Dosis", "Lucida Console", Monaco, monospace;
 }
 
 .blog-description {
@@ -675,11 +682,12 @@ button, input, select, textarea {
     position: absolute;
     display: inline-block;
     padding: 0 15px;
-    border: #424650 1px solid;
+/*    border: #424650 1px solid;*/
     text-decoration: none;
-    border-radius: 5px;
-    transition: border ease 0.3s;
-    background: #363c4a;
+/*    border-radius: 10px;*/
+/*    background: #363c4a;*/
+    text-shadow: none;
+    transition: text-shadow 0.5s ease-in-out;
 }
 
 .older-posts {
@@ -695,11 +703,15 @@ button, input, select, textarea {
     left: 0;
 }
 
-.older-posts:hover,
-.newer-posts:hover {
-    border-color: #9EABB3;
+.older-posts:hover
+{
+    text-shadow: 1px 1px #666666;
 }
 
+.newer-posts:hover
+{
+	text-shadow: -1px 1px #666666;
+}
 
 /* ==========================================================================
    8. Footer - The bottom of every page
@@ -709,12 +721,12 @@ button, input, select, textarea {
     position: relative;
     margin: 8rem 0 0 0;
     padding: 4rem 0;
-    border-top: #1a1e27 1px solid;
+    border-top: #1a1e27 2px dashed;
     font-size: 1.3rem;
     line-height: 1.7em;
     color: #BBC7CC;
     text-align: center;
-    background: #1c212b;
+    background: #000000;
 }
 
 .site-footer a {
