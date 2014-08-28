@@ -93,19 +93,19 @@ body {
     font-family: "Courier New", Courier, monospace;
     font-size: 2.0rem;
     line-height: 1.6em;
-    color: #B2B6BD;
+    color: #aaaaaa;
     background: #000000
 }
 
 ::-moz-selection {
-    color: #1c212b;
-    background: #a3be8c;
+    color: #000000;
+    background: #aaaaaa;
     text-shadow: none;
 }
 
 ::selection {
-    color: #1c212b;
-    background: #a3be8c;
+    color: #000000;
+    background: #aaaaaa;
     text-shadow: none;
 }
 
@@ -147,17 +147,44 @@ h6 {
 }
 
 a {
-    color: #bf6165;
-    transition: color ease 0.3s;
+    color: #729fcf;
+    text-decoration: none;
+    position: relative;
+    -moz-transition: all .3s linear;  
+    -webkit-transition: all .3s linear;  
+    -o-transition: all .3s linear;  
+    transition: all .3s linear;  
 }
 
 a:hover {
-    color: #a3be8c;
+    color: #aaaaaa;
+
+}
+
+.post-content a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #aaaaaa;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.25s ease-in-out 0s;
+    transition: all 0.25s ease-in-out 0s;
+}
+
+.post-content a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
 }
 
 h1 a, h2 a, h3 a,
 h4 a, h5 a, h6 a {
-    color: #739a99;
+    color: #729fcf;
 }
 
 
@@ -361,6 +388,32 @@ button, input, select, textarea {
 .vertical {
     display: table-cell;
     vertical-align: middle;
+}
+
+ul.main-navigation {
+  font-size: 17px;
+  padding: 0px;
+  margin: 0 auto;
+
+}
+
+ul.main-navigation{
+  padding-left: 0;
+}
+
+ul.main-navigation li {
+  display: inline;
+}
+
+ul.main-navigation li:hover {
+  text-decoration: underline;
+}
+
+.navig-bar {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    display: none;
 }
 
 
@@ -582,6 +635,7 @@ button, input, select, textarea {
 .post-template .post-header {
     padding: 60px 0;
 }
+
 .post-header #blog-logo:before {
     margin: 60px auto;
 }
@@ -625,13 +679,14 @@ button, input, select, textarea {
     top: 4rem;
     right: 0;
     width: 140px;
+    color: #fff;
 }
 
 .post-footer .share a {
     font-size: 1.8rem;
     display: inline-block;
     margin: 1.4rem 1.6rem 1.6rem 0;
-    color: #BBC7CC;
+    color: #fff;
 }
 
 .post-footer .share a:hover {
@@ -655,6 +710,36 @@ button, input, select, textarea {
     font-size: 1.1rem;
 }
 
+.back-to-top {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    background-color: rgba(80, 80, 80, 0.80);
+    color: rgba(240, 240, 240, 0.80);
+    text-decoration: none;
+    font-size: 1.5em;
+    padding: 1em;
+    display: none;
+    border-top-left-radius: 1em;
+    z-index: 1000;
+    -moz-transition: color 0.5s linear;  
+    -webkit-transition: color 0.5s linear;  
+    -o-transition: color 0.5s linear;  
+    transition: color 0.5s linear;  
+
+    -moz-transition: background-color 0.5s linear;  
+    -webkit-transition: background-color 0.5s linear;  
+    -o-transition: background-color 0.5s linear;  
+    transition: background-color 0.5s linear;
+    
+
+
+}
+
+.back-to-top:hover {
+    color: rgba(240, 240, 240, 1);
+    background-color: rgba(60, 60, 60, 0.50);
+}
 
 /* ==========================================================================
    7. Pagination - Tools to let you flick between pages
@@ -724,7 +809,7 @@ button, input, select, textarea {
     border-top: #1a1e27 2px dashed;
     font-size: 1.3rem;
     line-height: 1.7em;
-    color: #BBC7CC;
+    color: #fff;
     text-align: center;
     background: #000000;
 }

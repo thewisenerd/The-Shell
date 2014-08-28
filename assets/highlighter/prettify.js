@@ -1653,3 +1653,8 @@ var prettyPrint;
     });
   }
 })();
+
+$(function(){
+	$('pre').addClass('prettyprint');
+	prettyPrint();
+});
