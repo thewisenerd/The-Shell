@@ -2,6 +2,12 @@
 
 var d_id  = 'thewisenerd';
 
+var navig_bar_data = "<ul class=\"main-navigation\"> \
+  <li><a class='button' href=\"/about/\">about</a></li> \
+  <li><a class='button' href=\"/\">home</a></li></span> \
+  <li><a class='button' href=\"/projects/\">projects</a></li> \
+</ul>";
+
 jQuery(document).ready(function() {
     var offset = 220;
     var duration = 500;
@@ -22,16 +28,6 @@ jQuery(document).ready(function() {
 
 function get_disqus_shortname() {
 	return d_id;
-}
-
-function write_navbar() {
-var data = "<ul class=\"main-navigation\"> \
-  <li><a class='button' href=\"/about/\">about</a></li> \
-  <li><a class='button' href=\"/\">home</a></li></span> \
-  <li><a class='button' href=\"/projects/\">projects</a></li> \
-</ul>";
-document.writeln(data);
-
 }
 
 $(function()
@@ -62,6 +58,12 @@ $(function()
 
 		if ( $("#currentquote").size() ) {
 			newquote();
+		}
+
+		if ( $(".navig-bar").size() ) {
+			$(".navig-bar").html(function() {
+				return navig_bar_data;
+			});
 		}
 
 	}
