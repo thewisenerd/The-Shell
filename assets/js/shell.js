@@ -1,3 +1,5 @@
+//can't follow what we're (not) said to do, can we? :high-five:
+
 var d_id  = 'thewisenerd';
 
 jQuery(document).ready(function() {
@@ -24,11 +26,9 @@ function get_disqus_shortname() {
 
 function write_navbar() {
 var data = "<ul class=\"main-navigation\"> \
-  <li><a class='button' href=\"/about/\">About</a></li> \
-  <li><a class='button' href=\"/archives/\">Archives</a></li> \
-  <li><a class='button' href=\"/\">Blog</a></li></span> \
-  <li><a class='button' href=\"/categories/\">Categories</a></li> \
-  <li><a class='button' href=\"/projects/\">Projects</a></li> \
+  <li><a class='button' href=\"/about/\">about</a></li> \
+  <li><a class='button' href=\"/\">home</a></li></span> \
+  <li><a class='button' href=\"/projects/\">projects</a></li> \
 </ul>";
 document.writeln(data);
 
@@ -38,7 +38,12 @@ $(function()
 	{
 		$("#site-head").hover(function()
 		{
-			$(".navig-bar").slideToggle();
+			$(".navig-bar").stop().animate(
+				{ height: "toggle",
+				opacity: "toggle" },
+				{duration: 300}
+			);
+
 			return false;
 		}); 
 
@@ -46,7 +51,11 @@ $(function()
 		$(".post-header").hover(function()
 		{
 			if ( $(".navig-bar-fix").size() ) {
-				$(".navig-bar").slideToggle();
+				$(".navig-bar").stop().animate(
+					{ height: "toggle",
+					opacity: "toggle" },
+					{duration: 300}
+				);
 			}
 			return false;
 		}); 
