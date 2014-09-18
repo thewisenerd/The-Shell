@@ -514,7 +514,7 @@ ul.main-navigation li:hover {
 .post {
     position: relative;
     width:80%;
-    max-width: 700px;
+    max-width: 800px;
     margin: 4rem auto;
     padding-bottom: 4rem;
     border-bottom: #424650 1px solid;
@@ -739,6 +739,11 @@ ul.main-navigation li:hover {
 .back-to-top:hover {
     color: rgba(240, 240, 240, 1);
     background-color: rgba(60, 60, 60, 0.50);
+}
+
+.embed-youtube {
+	margin: 0 auto;
+	display: table;
 }
 
 /* ==========================================================================
